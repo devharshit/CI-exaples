@@ -1,0 +1,19 @@
+Notes:
+------
+
+Git commit steps:
+-----------------
+1.
+  git clone http://192.168.10.32/solwininfotech/avartanslider.git
+2.
+  git checkout -b login-page-update
+3.
+  git add .
+4.
+  git commit -a -m "Add file"
+5.
+  git push origin login-page-update
+6.
+  git pull origin development
+7.
+  open your git site and mearge all change from there.
