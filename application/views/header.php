@@ -12,15 +12,15 @@ $setlogin = $this->Admin_model->login('users', $userdata);
   <meta name="author" content="">
   <title><?php echo $page_title; ?></title>
   <!-- Bootstrap core CSS-->
-  <link href="ui/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>ui/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="ui/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url();?>ui/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="ui/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>ui/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="ui/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>ui/css/sb-admin.css" rel="stylesheet">
   <!-- Custom styles foradmin template-->
-  <link href="ui/css/style.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>ui/css/style.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
