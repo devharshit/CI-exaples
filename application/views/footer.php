@@ -32,19 +32,19 @@ $setlogin = $this->Admin_model->login('users', $userdata);
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="ui/vendor/jquery/jquery.min.js"></script>
-    <script src="ui/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url();?>ui/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>ui/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="ui/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url();?>ui/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="ui/vendor/chart.js/Chart.min.js"></script>
-    <script src="ui/vendor/datatables/jquery.dataTables.js"></script>
-    <script src="ui/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="<?php echo base_url();?>ui/vendor/chart.js/Chart.min.js"></script>
+    <script src="<?php echo base_url();?>ui/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="<?php echo base_url();?>ui/vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="ui/js/sb-admin.min.js"></script>
+    <script src="<?php echo base_url();?>ui/js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="ui/js/sb-admin-datatables.min.js"></script>
-    <script src="ui/js/sb-admin-charts.min.js"></script>
+    <script src="<?php echo base_url();?>ui/js/sb-admin-datatables.min.js"></script>
+    <script src="<?php echo base_url();?>ui/js/sb-admin-charts.min.js"></script>
   </div>
 </body>
 
