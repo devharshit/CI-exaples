@@ -26,6 +26,17 @@
                   echo form_error('adminuserfname'); ?>
               </div>
               <div class="form-group">
+                <label for="inputUserLName">User's Last Name</label>
+                <?php echo form_input( array(
+                      'type' => 'text',
+                      'name' => 'adminuserlname',
+                      'id' => 'inputUserLName',
+                      'class' => 'form-control',
+                      'placeholder' => 'User`s Last Name',
+                  ));
+                  echo form_error('adminuserfname'); ?>
+              </div>
+              <div class="form-group">
                 <label for="inputUserName">User Name</label>
                 <?php echo form_input( array(
                       'type' => 'text',
