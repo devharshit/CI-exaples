@@ -55,7 +55,7 @@ class Users extends CI_Controller {
 		$data['get_user_data'] = $this->Admin_model->getfromid('users', $dataId);
 		$this->form_validation->set_rules('adminuserfname', 'User`s First Name', 'required');
 		$this->form_validation->set_rules('adminuserfname', 'User`s Last Name', 'required');
-		$this->form_validation->set_rules('adminuser', 'User Name', 'required|is_unique[users.user_name]');
+		// $this->form_validation->set_rules('adminuser', 'User Name', 'required|is_unique[users.user_name]');
 		$this->form_validation->set_rules('adminpassword', 'User Password', 'required');
 		$this->form_validation->set_rules('adminpasswordconfirm', 'Confirm Password', 'required|matches[adminpassword]');
 		$this->form_validation->set_rules('adminuserrole', 'User Role Required', 'required');
@@ -71,11 +71,12 @@ class Users extends CI_Controller {
 			$tbldata = array(
 				'userfname' => $_POST['adminuserfname'],
 				'userlname' => $_POST['adminuserlname'],
-				'user_name' => $_POST['adminuser'],
+				// 'user_name' => $_POST['adminuser'],
 				'user_password' => $_POST['adminpasswordconfirm'],
 				'user_role' => $_POST['adminuserrole'],
 				'user_status ' => $_POST['adminuserstatus']
 			);
+			print_r($tbldata); exit;
 			$this->Admin_model->update('users', $tbldata, $dataId);
 			redirect(base_url().'users');
 		}

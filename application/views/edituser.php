@@ -9,7 +9,7 @@
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
       <!-- User Registration Form-->
-      <?php echo form_open('Users/add');?>
+      <?php echo form_open();?>
         <div class="card mb-3 col-md-6 col-sm-12 col-xs-12">
           <div class="card-header text-center">
             <i class="fa fa-1x fa-table pull-left"></i><h3 class="pull-left">Add new user</h3>
@@ -48,6 +48,7 @@
                       'class' => 'form-control text-capitalize',
                       'value' => $get_user_data[0]['user_name'],
                       'placeholder' => 'User Name',
+                      'readonly' => 'readonly',
                   ));
                   echo form_error('adminuser'); ?>
               </div>
@@ -76,11 +77,11 @@
               <div class="form-group">
                 <label for="inputPassword">Select User Role</label>
                 <select class="form-control" name="adminuserrole" id="inputUserRole">
-                  <option selected="selected">Select User Role</option>
-                  <option value="marker">Marker</option>
-                  <option value="signer">Signer</option>
-                  <option value="accountant">Accountant</option>
-                  <option value="masteradmin">Masteradmin</option>
+                  <option>Select User Role</option>
+                  <option value="marker" <?php if($get_user_data[0]['user_role'] == 'marker' ) { echo 'selected="selected"';}?>>Marker</option>
+                  <option value="signer" <?php if($get_user_data[0]['user_role'] == 'signer' ) { echo 'selected="selected"';}?>>Signer</option>
+                  <option value="accountant" <?php if($get_user_data[0]['user_role'] == 'accountant' ) { echo 'selected="selected"';}?>>Accountant</option>
+                  <option value="masteradmin" <?php if($get_user_data[0]['user_role'] == 'masteradmin' ) { echo 'selected="selected"';}?>>Masteradmin</option>
                 </select>
                 <?php echo form_error('adminuserrole');?>
               </div>
@@ -88,8 +89,8 @@
                 <label for="inputPassword">Set User status</label>
                 <select class="form-control" name="adminuserstatus" id="inputUserStatus">
                   <option selected="selected">Select User Status</option>
-                  <option value="marker">Enable</option>
-                  <option value="signer">Disable</option>
+                  <option value="1" <?php if($get_user_data[0]['user_status'] == 1 ) { echo 'selected="selected"';}?>>Enable</option>
+                  <option value="0" <?php if($get_user_data[0]['user_status'] == 0 ) { echo 'selected="selected"';}?>>Disable</option>
                 </select>
                 <?php echo form_error('adminuserstatus');?>
               </div>
