@@ -45,12 +45,12 @@
                   <td><?php echo ucfirst($userValue['userfname']) .'&nbsp;'. ucfirst($userValue['userlname']);?></td>
                   <td><?php echo $userValue['user_name'];?></td>
                   <td><?php echo ucfirst($userValue['user_role']);?></td>
-                  <td class="text-danger"><?php if ($userValue['user_status'] === 1) {
-                    echo "Enable";
+                  <td><?php if ($userValue['user_status'] == 1) {
+                    echo "<div class='text-success'>Enable</div>";
                   }else{
-                    echo "Disable";
+                    echo "<div class='text-danger'>Disable</div>";
                   } ?></td>
-                  <td><a href="Edit"><i class="fa fa-2x fa-edit"></i></a> || <a class="text-danger" href="<?php echo base_url() . 'users/delete/' . $userValue['user_id'];?>" onClick="return confirm('Are you sure to delete this user...?')" ><i class="fa fa-2x fa-trash"></i></a></td>
+                  <td><a href="<?php echo base_url() . 'users/edit/' . $userValue['user_id'];?>"><i class="fa fa-2x fa-edit"></i></a> || <a class="text-danger" href="<?php echo base_url() . 'users/delete/' . $userValue['user_id'];?>" onClick="return confirm('Are you sure to delete this user...?')" ><i class="fa fa-2x fa-trash"></i></a></td>
                   <!-- <td><a href="Edit">Edit</a> || <a href="<?php echo base_url() . 'users/delete/' . $userValue['user_id'];?>" data-toggle="modal" data-target="#deleteModal" >Delete</a></td> -->
                 </tr>
                 <?php $no++;}?>

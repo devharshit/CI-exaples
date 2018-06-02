@@ -14,8 +14,14 @@ class Admin_model extends CI_Model {
 	}
 
 	public function get($table) { //get all data
-		$tabkeData = $this->db->get($table);
-		$dataList = $tabkeData->result_array();
+		$tableData = $this->db->get($table);
+		$dataList = $tableData->result_array();
+		return $dataList;
+	}
+
+	public function getfromid($table, $dataId) { //get all data using ID 
+		$tableData = $this->db->get_where($table, $dataId);
+		$dataList = $tableData->result_array();
 		return $dataList;
 	}
 

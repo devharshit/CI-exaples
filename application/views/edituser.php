@@ -1,3 +1,4 @@
+
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
@@ -20,8 +21,9 @@
                       'type' => 'text',
                       'name' => 'adminuserfname',
                       'id' => 'inputUserFullName',
-                      'class' => 'form-control',
+                      'class' => 'form-control text-capitalize',
                       'placeholder' => 'User Full Name',
+                      'value' => $get_user_data[0]['userfname'],
                   ));
                   echo form_error('adminuserfname'); ?>
               </div>
@@ -31,7 +33,8 @@
                       'type' => 'text',
                       'name' => 'adminuserlname',
                       'id' => 'inputUserLName',
-                      'class' => 'form-control',
+                      'class' => 'form-control text-capitalize',
+                      'value' => $get_user_data[0]['userlname'],
                       'placeholder' => 'User`s Last Name',
                   ));
                   echo form_error('adminuserfname'); ?>
@@ -42,18 +45,19 @@
                       'type' => 'text',
                       'name' => 'adminuser',
                       'id' => 'inputUserName',
-                      'class' => 'form-control',
+                      'class' => 'form-control text-capitalize',
+                      'value' => $get_user_data[0]['user_name'],
                       'placeholder' => 'User Name',
                   ));
                   echo form_error('adminuser'); ?>
               </div>
-              <div class="form-group">
+             <!--  <div class="form-group">
                 <label for="inputPassword">User Password</label>
                 <?php echo form_input( array(
                       'type' => 'password',
                       'name' => 'adminpassword',
                       'id' => 'inputPassword',
-                      'class' => 'form-control',
+                      'class' => 'form-control text-capitalize',
                       'placeholder' => 'User Password',
                   )); 
                   echo form_error('adminpassword');?>
@@ -64,11 +68,11 @@
                       'type' => 'password',
                       'name' => 'adminpasswordconfirm',
                       'id' => 'inputPasswordConfirm',
-                      'class' => 'form-control',
+                      'class' => 'form-control text-capitalize',
                       'placeholder' => 'Re-Enter User Password',
                   )); 
                   echo form_error('adminpasswordconfirm');?>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="inputPassword">Select User Role</label>
                 <select class="form-control" name="adminuserrole" id="inputUserRole">
@@ -84,8 +88,8 @@
                 <label for="inputPassword">Set User status</label>
                 <select class="form-control" name="adminuserstatus" id="inputUserStatus">
                   <option selected="selected">Select User Status</option>
-                  <option value="1">Enable</option>
-                  <option value="0">Disable</option>
+                  <option value="marker">Enable</option>
+                  <option value="signer">Disable</option>
                 </select>
                 <?php echo form_error('adminuserstatus');?>
               </div>
