@@ -50,6 +50,7 @@ class Users extends CI_Controller {
 		
 	}
 
+	/*
 	public function edit($id) {
 		$dataId = array('user_id' => $id );
 		$data['get_user_data'] = $this->Admin_model->getfromid('users', $dataId);
@@ -65,9 +66,10 @@ class Users extends CI_Controller {
 			$data['error_msg'] = '';
 			$data['page_title'] = 'Update User data';
 			$this->load->view('header', $data);
-			$this->load->view('edituser', $data);
+			$this->load->view('edituser', $data, $dataId);
 			$this->load->view('footer', $data);
 		}else{
+			echo 'hello'; print_r($dataId); exit;
 			$tbldata = array(
 				'userfname' => $_POST['adminuserfname'],
 				'userlname' => $_POST['adminuserlname'],
@@ -76,15 +78,17 @@ class Users extends CI_Controller {
 				'user_role' => $_POST['adminuserrole'],
 				'user_status ' => $_POST['adminuserstatus']
 			);
+			print_r($dataId);
+			echo "<br><hr><br>";
 			print_r($tbldata); exit;
 			$this->Admin_model->update('users', $tbldata, $dataId);
 			redirect(base_url().'users');
 		}
 	}
+	*/
 
 	public function delete($id) {
 		$dataId = array('user_id' => $id );
-		// print_r($dataId); exit;
 		$this->Admin_model->delete('users', $dataId);
 		redirect(base_url().'users');
 	}

@@ -94,7 +94,7 @@
                 </select>
                 <?php echo form_error('adminuserstatus');?>
               </div>
-            <?php echo form_submit('adduser', 'Add', "class='btn btn-primary btn-block'"); ?>
+            <?php echo form_submit('updateuser', 'Update', "class='btn btn-primary btn-block'"); ?>
         </div>
       </div>
     <?php echo form_close(); ?>
