@@ -40,6 +40,8 @@ $setlogin = $this->Admin_model->login('users', $userdata);
     <script src="<?php echo base_url();?>ui/vendor/chart.js/Chart.min.js"></script>
     <script src="<?php echo base_url();?>ui/vendor/datatables/jquery.dataTables.js"></script>
     <script src="<?php echo base_url();?>ui/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom BS datepicker-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="<?php echo base_url();?>ui/js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->

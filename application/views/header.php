@@ -17,6 +17,8 @@ $setlogin = $this->Admin_model->login('users', $userdata);
   <link href="<?php echo base_url();?>ui/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url();?>ui/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- BS Date picker-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url();?>ui/css/sb-admin.css" rel="stylesheet">
   <!-- Custom styles foradmin template-->
@@ -90,6 +92,17 @@ $setlogin = $this->Admin_model->login('users', $userdata);
           </ul>
         </li> -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti1" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-tasks"></i>
+            <span class="nav-link-text">Work</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti1">
+            <li>
+              <a href="<?php echo base_url('addroughdata');?>"><i class="fa fa-plus-square"></i>&nbsp;&nbsp;&nbsp; Add Rough Details</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-gear"></i>
             <span class="nav-link-text">setting</span>
@@ -108,11 +121,11 @@ $setlogin = $this->Admin_model->login('users', $userdata);
               <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Users</a>
               <ul class="sidenav-third-level collapse" id="collapseMulti2">
                 <li>
-                  <a href="<?php echo base_url('users');?>">Master Users</a>
+                  <a href="<?php echo base_url('users');?>">All Users</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="<?php echo base_url('users/markers');?>">All Marker</a>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
