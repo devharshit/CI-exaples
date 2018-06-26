@@ -12,7 +12,7 @@ class Addroughdata extends CI_Controller {
 	}
 	
 	public function index() {
-		$this->form_validation->set_rules('assigndate', 'Date', 'required');
+		$this->form_validation->set_rules('', 'Date', 'required');
 		$this->form_validation->set_rules('cutno', 'CUT No', 'required');
 		$this->form_validation->set_rules('weight', 'CUT No', 'required');
 		$this->form_validation->set_rules('roughname', 'CUT No', 'required');
@@ -30,21 +30,23 @@ class Addroughdata extends CI_Controller {
 			$this->load->view('footer', $data);
 		}else{
 			$userdata = array(
-				'date' => 'assigndate',
-				'cut_no' => 'cutno',
-				'marker' => 'marker',
-				'weight' => 'weight',
-				'rough_name' => 'roughname',			
-				'mk_wt' => NULL,		
-				'pieces' => NULL,			
-				'exp' => NULL,			
-				'dos' => NULL			
+				'date' => $_POST['assigndate'],
+				'cut_no' => $_POST['cutno'],
+				'marker' => $_POST['marker'],
+				'weight' => $_POST['weight'],
+				'rough_name' => $_POST['roughname']			
 			);
 			print_r($userdata);
-			echo '<h1>Hello...!</h1>'; exit;			
-			// redirect(base_url().'board');
+			$setlogin = $this->Admin_model->insert('rough_detail', $userdata);
+			redirect(base_url().'addroughdata/view');
 		}
-
 		//  redirect(base_url().'board/add_user');
+	}
+
+	public function view(){
+		$data['allroughdata'] = $this->Admin_model->get('rough_detail');
+		$this->load->view('header', $data);
+		$this->load->view('roughlist', $data);
+		$this->load->view('footer', $data);
 	}
 }
