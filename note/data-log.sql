@@ -3,4 +3,10 @@ CREATE TABLE `users` ( `user_id` INT NOT NULL AUTO_INCREMENT , `userfname` VARCH
 
 INSERT INTO `users` (`user_id`, `userfname`, `user_name`, `user_password`, `user_role`, `user_status`) VALUES (NULL, 'harshit', 'harsh', 'harsh', 'masteradmin', '1');
 
-INSERT INTO `user_role` (`role_id`, `userrole`) VALUES (NULL, 'masteruser'), (NULL, 'marker'), (NULL, 'signer')
+INSERT INTO `user_role` (`role_id`, `userrole`) VALUES (NULL, 'masteruser'), (NULL, 'marker'), (NULL, 'signer');
+
+/*
+command to backup database using command line : 
+	/opt/lampp/bin/mysqldump -u root -p mine > /home/dells22/Desktop/mine.sql
+ 	                                      database   destination of DB file    
+                                        */
