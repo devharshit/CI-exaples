@@ -32,9 +32,8 @@
                 </tr>
               </thead>
               <tbody>
-                $no = 1;
-                // print_r($allrough    data); exit;
-                foreach ($allroughdata as $roughdata) { ?>
+                <?php $no = 1;
+              foreach ($allroughdata as $roughdata) { ?>
                   <tr>
                     <td class="text-capitalize text-center"><?php echo $no;?></td>
                     <td class="text-capitalize text-center"><?php echo $roughdata['date']; ?></td>
@@ -60,7 +59,7 @@
                     } ?></td>
                     <td class="text-capitalize text-center"><a class="text-danger" href="<?php echo base_url() . 'users/delete/' . $roughdata['id'];?>" onClick="return  confirm('Are you sure to delete this user...?')" ><i class="fa fa-2x fa-trash"></i></a></td>
                 </tr>
-                <?php $no++;}?>
+                <?php $no++; }?>
 
               </tbody>
             </table>
