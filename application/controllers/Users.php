@@ -49,6 +49,15 @@ class Users extends CI_Controller {
 		}
 		
 	}
+	
+	public function excel() {
+		$data['page_title'] = 'Dashboard';
+		$data['userslist'] = $this->Admin_model->get('users');
+		$this->load->view('header', $data);
+		$this->load->view('usersxls', $data);
+		$this->load->view('footer', $data);
+		//  redirect(base_url().'board/add_user');
+	}
 
 	/*
 	public function edit($id) {
