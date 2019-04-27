@@ -19,7 +19,17 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->view('welcome_message');
+	{	
+		$data['page_title'] = 'Shingala Infotech -  Web Development, Social Media marketing company in india.';
+		$this->load->view('header', $data);
+		$this->load->view('home', $data);
+		$this->load->view('footer', $data);
+	}
+	public function index()
+	{	
+		$data['page_title'] = 'Shingala Infotech -  Web Development, Social Media marketing company in india.';
+		$this->load->view('header', $data);
+		$this->load->view('home', $data);
+		$this->load->view('footer', $data);
 	}
 }
